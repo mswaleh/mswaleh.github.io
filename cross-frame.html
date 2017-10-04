@@ -1,0 +1,29 @@
+<html>
+
+<body>
+  
+
+
+<meta http-equiv="PRAGMA" content="NO-CACHE">
+<meta http-equiv="Expires" content="Mon, 01 Jan 1990 12:00:00 GMT">
+
+  <meta charset="UTF-8">
+
+
+
+
+  <form id="form">
+    <input name="message" placeholder="Enter message" type="text">
+    <input type="submit" value="Click to send">
+  </form>
+
+  <script>
+    form.onsubmit = function() {
+      var win = window.parent;
+      win.postMessage(this.message.value, '*');
+      return false;
+    };
+  </script>
+
+
+</body></html>
