@@ -9,9 +9,6 @@
 
   <meta charset="UTF-8">
 
-
-
-
   <form id="form">
     <input name="message" placeholder="Enter message" type="text">
     <input type="submit" value="Click to send">
@@ -20,7 +17,7 @@
   <script>
     form.onsubmit = function() {
       var win = window.parent;
-      win.postMessage(this.message.value, '*');
+      win.postMessage(this.message.value, 'https://c.na40.visual.force.com/apex/PostMessageReceiverPage2');
       return false;
     };
   </script>
