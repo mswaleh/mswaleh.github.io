@@ -17,7 +17,7 @@
   <script>
     form.onsubmit = function() {
       var win = window.parent;
-      win.postMessage(this.message.value, 'http://google.com');
+      win.postMessage(this.message.value, '*');
       return false;
     };
   </script>
