@@ -30,10 +30,24 @@
             );
         },    'https://talentneuron--devsakina.sandbox.my.site.com/ApptBooking'  // Site endpoint
     );
+
+    $Lightning.use("runtime_appointmentbooking:lightningOutGuest",
+        function() {                  // Callback once framework and app load
+            $Lightning.createComponent(
+                "lightning:flow",    // top-level component of your app
+                { },    // attributes to set on the component when created
+                "lexcontainer",    // the DOM location to insert the component
+                function(component) {            // API name of the Flow
+                    component.startFlow("TN_Test_NoLead_Inbound_New_Guest_Appointment");
+                }
+            );
+        },    'https://talentneuron--devsakina.sandbox.my.site.com/ApptBooking'  // Site endpoint
+    );
 </script>
 </head>
 <body>
 <div id="lexcontainer" class="center">  
+<div id="lexcontainer2" class="center">  
 </div>
 </body>
 </html>
